@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #3A6EA5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #E6E8E6;
+  align-items: center;
+}
+
+.logo img{
+  height:40px
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #553A41;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.h {
+  text-align: center;
+  padding: 100px 20px;
+  background: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd53') center/cover;
+  color: #553A41;
+}
+
+.btn {
+  display: inline-block;  
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #553A41;
+  color: #E6E8E6;
+  text-decoration: none;
+}
+
+.products {
+  padding: 40px;
+}
+
+.products h2 {
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #E6E8E6;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 80%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.old {
+  text-decoration: line-through;
+  color: black;
+}
+
+button {
+  margin-top: 5px;
+  padding: 5px;
+  border: none;
+  background: #553A41;
+  color: #E6E8E6;
+  cursor: pointer;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #E6E8E6;
+  margin-top: 40px;
+}
+
+.shop-top {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #E6E8E6;
+  margin: 20px;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  flex: 1;
+  border: 1px solid #999;
+  background: #E6E8E6;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+
+.search-btn {
+  padding: 12px 20px;
+  border: none;
+  background: #E6E8E6;
+  border-left: 1px solid #999;
+  cursor: pointer;
+}
+
+.filter-btn {
+  padding: 12px 25px;
+  border: 1px solid #999;
+  background: #E6E8E6;
+  cursor: pointer;
+  color: #553A41;
+}
+.products h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color:#553A41
+}
+
+.card p {
+  font-weight: bold;
+  margin-top: 5px;
+}

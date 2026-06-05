@@ -1,5 +1,6 @@
 let score = 0;
 let power = 1;
+let level = 1;
 
 let cost1 = 10;
 let cost2 = 25;
@@ -8,6 +9,8 @@ let cost4 = 100;
 
 let scoreText = document.getElementById("score");
 let powerText = document.getElementById("power");
+let levelText = document.getElementById("level");
+let message = document.getElementById("message");
 
 let clickButton = document.getElementById("click");
 let upgrade1 = document.getElementById("u1");
@@ -18,6 +21,7 @@ let upgrade4 = document.getElementById("u4");
 function updateScreen() {
     scoreText.innerHTML = score;
     powerText.innerHTML = power;
+    levelText.innerHTML = level;
 
     upgrade1.innerHTML = "Upgrade 1 (" + cost1 + ")";
     upgrade2.innerHTML = "Upgrade 2 (" + cost2 + ")";
@@ -25,8 +29,19 @@ function updateScreen() {
     upgrade4.innerHTML = "Upgrade 4 (" + cost4 + ")";
 }
 
+function checkLevelUp() {
+    let newLevel = Math.floor(score / 100) + 1;
+
+    if (newLevel > level) {
+        level = newLevel;
+        message.innerHTML = "Level Up! You reached Level " + level + "!";
+    }
+}
+
 clickButton.onclick = function () {
     score += power;
+
+    checkLevelUp();
     updateScreen();
 };
 
@@ -34,7 +49,8 @@ upgrade1.onclick = function () {
     if (score >= cost1) {
         score -= cost1;
         power += 1;
-        cost1 = Math.floor(cost1 * 1.5); // cena +50%
+        cost1 = Math.floor(cost1 * 1.5);
+
         updateScreen();
     }
 };
@@ -44,6 +60,7 @@ upgrade2.onclick = function () {
         score -= cost2;
         power += 2;
         cost2 = Math.floor(cost2 * 1.5);
+
         updateScreen();
     }
 };
@@ -53,6 +70,7 @@ upgrade3.onclick = function () {
         score -= cost3;
         power += 3;
         cost3 = Math.floor(cost3 * 1.5);
+
         updateScreen();
     }
 };
@@ -62,6 +80,7 @@ upgrade4.onclick = function () {
         score -= cost4;
         power += 5;
         cost4 = Math.floor(cost4 * 1.5);
+
         updateScreen();
     }
 };
